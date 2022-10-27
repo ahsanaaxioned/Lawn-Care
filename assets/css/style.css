@@ -99,16 +99,90 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 57.75%; 
   margin: 0 auto;
+}
+
+:root{
+  --primary-color:#4E9525;
+  --secondary-color:#F8D341;
+  --other :#fff;
+  --black:#000;
 }
 /*=================================
   Header styling starts here
 =================================*/
+.header-first {
+  padding: 35px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.social-list{ flex-basis: 30%; }
+.logo{ flex-basis: 20% ;}
 
+.icon{
+  position: relative;
+  text-indent: -9999px;
+}
 
+.icon::before {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  background: #F2F2F2;
+  color: #4D4D4D;
+  font-family: "FontAwesome";
+  font-size: 11px;
+  float: left;
+  justify-content: center;
+  text-indent: 0;
+}
 
+.facebook::before { content: "\f09a"; }
+.twitter::before { content: "\f099"; }
+.instagram::before { content: "\f16d"; }
+.basket-ball::before { content: "\f17d"; }
+
+.logo-anc {
+  color: var(--black);
+  font-size: 23px;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+.logo-span{ color: var(--primary-color); }
+
+.search-input input{
+  border: none;
+  outline: none;
+  background: #F2F2F2;
+  border-radius: 30px;
+  padding: 10px 12px;
+  position: relative;
+}
+
+.search-input{ position: relative; }
+
+.search-input::after {
+  content: "\f002";
+  font-family: "FontAwesome";
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--other);
+  background: var(--primary-color);
+  border-radius: 50%;
+}
 
 
 /*=================================

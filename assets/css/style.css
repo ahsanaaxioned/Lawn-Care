@@ -245,6 +245,7 @@ li {
 /*=================================
   main styling starts here
 =================================*/
+/* banner section start here */
 .banner{
   padding: 199px 0 52px 0;
   background: url(../images/bg_1.jpg) center no-repeat;
@@ -262,9 +263,8 @@ li {
 .banner-heading{
   padding-right: 53%;
   color: var(--other);
-  font-size: 38px;
+  font-size: 40px;
   font-weight: 900;
-  text-transform: capitalize;
 }
 
 .banner-para2 {
@@ -288,19 +288,117 @@ li {
 .learn-btn::before {
   content: "\f105";
   position: absolute;
-  top: 23%;
+  top: 31%;
   right: 7%;
   float: right;
   font-family: "FontAwesome";
-  font-size: 15px;
+  font-size: 10px;
 }
 
 .learn-btn:hover{
   background-color: var(--other);
   color: var(--primary-color);
 }
+/* banner section end here */
+/* service section start here */
+.services-section .wrapper {
+  padding: 20px 0 103px;
+  display: flex;
+  justify-content: space-between;
+}
 
+.services-list {
+  margin-top: 24px;
+  flex-basis: 73.3%;
+}
 
+.service{
+  display: block;
+  text-indent: -9999px;
+}
+
+.services-list {
+  display: flex;
+  align-items: center;
+  flex-basis: 73.3%;
+  justify-content: space-between;
+}
+
+.quote { flex-basis: 23%; }
+.service { padding-top: 13px; }
+
+.service::before {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  float: left;
+  display: flex;
+  background: #F2F2F2;
+  color: var(--primary-color);
+  align-items: center;
+  font-family: "FontAwesome";
+  justify-content: center;
+  text-indent: 0;
+}
+
+.icon1::before { content: "\e59a"; }
+.icon2::before { content: "\f722"; }
+.icon3::before { content: "\e52f"; }
+
+.services-item {
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 1px 10px 0#cdcdcd;
+  flex-direction: column;
+  flex-basis: 31%;
+}
+
+.quote-heading {
+  color: var(--primary-color);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.quote-title {
+  padding: 7px 0 14px 0;
+  color: #343434;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.services-item p {
+  padding: 0 13.5% 13px 13.5% ;
+  color: #777;
+  font-size: 10px;
+  line-height: 2;
+  text-align: center;
+}
+
+.quote-para{
+  padding-right: 4%;
+  color: #777;
+  font-size: 11px;
+  line-height: 20px;
+}
+
+.quote-btn {
+  padding: 8px 16px;
+  border: 2px solid var(--primary-color);
+  border-radius: 2px;
+  margin: 12px 0 16px;
+  background-color: var(--primary-color);
+  color: var(--other);
+  font-size: 10px;
+  transition: all .5s ease-in-out;
+}
+
+.quote-btn:hover{
+  border: 2px solid var(--primary-color);
+  background-color: var(--other);
+  color: var(--primary-color);
+}
+/* service section end here */
 
 
 

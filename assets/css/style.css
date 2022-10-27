@@ -7,6 +7,8 @@
    v2.0 | 20110126
    License: none (public domain)
    ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
 ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
@@ -83,7 +85,7 @@ sub { bottom: -.25em; }
 /*for all*/
 body {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 a { 
@@ -157,7 +159,7 @@ li {
 
 .logo-anc {
   color: var(--black);
-  font-size: 23px;
+  font-size: 22px;
   font-weight: 900;
   text-transform: capitalize;
 }
@@ -165,7 +167,7 @@ li {
 .logo-span{ color: var(--primary-color); }
 
 .search-input input{
-  padding: 8px 12px;
+  padding: 10px 12px;
   border: none;
   border-radius: 30px;
   position: relative;
@@ -173,12 +175,14 @@ li {
   outline: none;
 }
 
+.search-input input::placeholder { font-size: 11px; }
+
 .search-input{ position: relative; }
 
 .search-input::after {
   content: "\f002";
-  width: 31px;
-  height: 31px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   display: flex;
   position: absolute;
@@ -223,8 +227,8 @@ li {
  .nav-anc {
    padding-left: 14px;
    color: var(--other);
-   font-size: 9px;
-   font-weight: 900;
+   font-size: 10px;
+   font-weight: 600;
    text-transform: uppercase;
    transition: all .5s ease-in-out;
  }
@@ -232,7 +236,7 @@ li {
  .nav-item a.active,
  .nav-item a:hover { color: var(--secondary-color); }
 
-.nav-item{ margin-right: 2.8%; }
+ .nav-item{ margin-right: 2.5%; }
 
 /*=================================
   Header styling ends here
@@ -241,7 +245,60 @@ li {
 /*=================================
   main styling starts here
 =================================*/
+.banner{
+  padding: 199px 0 52px 0;
+  background: url(../images/bg_1.jpg) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
 
+.banner-para{
+  color: var(--secondary-color);
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.banner-heading{
+  padding-right: 53%;
+  color: var(--other);
+  font-size: 38px;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+.banner-para2 {
+  color: #b3b9ac;
+  font-size: 12px;
+}
+
+.banner-para2::first-letter { text-transform: capitalize; }
+.learn-btn {
+  padding: 5px 2%;
+  border: 1px solid var(--primary-color);
+  border-radius: 2px;
+  margin: 15px 0;
+  position: relative;
+  background: var(--primary-color);
+  color: var(--other);
+  font-size: 12px;
+  transition: all .5s ease-in-out;
+}
+
+.learn-btn::before {
+  content: "\f105";
+  position: absolute;
+  top: 23%;
+  right: 7%;
+  float: right;
+  font-family: "FontAwesome";
+  font-size: 15px;
+}
+
+.learn-btn:hover{
+  background-color: var(--other);
+  color: var(--primary-color);
+}
 
 
 

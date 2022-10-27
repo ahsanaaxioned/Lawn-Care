@@ -112,17 +112,19 @@ li {
 /*=================================
   Header styling starts here
 =================================*/
-.header-first {
-  padding: 35px 0;
+.header-first .wrapper {
+  width: 57.75%;
+  padding: 31px 0;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.social-list{ flex-basis: 30%; }
-.logo{ flex-basis: 20% ;}
+.social-list { flex-basis: 30%; }
+.logo { flex-basis: 20% ; }
 
-.icon{
+.icon {
   position: relative;
   text-indent: -9999px;
 }
@@ -140,12 +142,18 @@ li {
   float: left;
   justify-content: center;
   text-indent: 0;
+  transition: all .5s ease-in-out;
 }
 
 .facebook::before { content: "\f09a"; }
 .twitter::before { content: "\f099"; }
 .instagram::before { content: "\f16d"; }
 .basket-ball::before { content: "\f17d"; }
+
+.icon:hover::before{ 
+  background-color: var(--primary-color);
+  color: var(--other);
+}
 
 .logo-anc {
   color: var(--black);
@@ -157,33 +165,74 @@ li {
 .logo-span{ color: var(--primary-color); }
 
 .search-input input{
+  padding: 8px 12px;
   border: none;
-  outline: none;
-  background: #F2F2F2;
   border-radius: 30px;
-  padding: 10px 12px;
   position: relative;
+  background: #F2F2F2;
+  outline: none;
 }
 
 .search-input{ position: relative; }
 
 .search-input::after {
   content: "\f002";
-  font-family: "FontAwesome";
-  float: right;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  display: flex;
   position: absolute;
   top: 0;
   right: 0;
-  width: 34px;
-  height: 34px;
-  display: flex;
-  justify-content: center;
+  float: right;
   align-items: center;
-  color: var(--other);
   background: var(--primary-color);
-  border-radius: 50%;
+  color: var(--other);
+  font-family: "FontAwesome";
+  justify-content: center;
 }
 
+.header-second {
+  padding: 16px 0;
+  background-color: var(--primary-color);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+ }
+ 
+ .bar {
+   width: 25px;
+   height: 3px;
+   margin: 5px;
+   display: block;
+   background-color: #000;
+   text-indent: -9999px;
+   transition: all 0.5s ease-in-out;
+ }
+
+ .bar2 { width: 13px; }
+
+ .nav-list {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ .nav-anc {
+   padding-left: 14px;
+   color: var(--other);
+   font-size: 9px;
+   font-weight: 900;
+   text-transform: uppercase;
+   transition: all .5s ease-in-out;
+ }
+
+ .nav-item a.active,
+ .nav-item a:hover { color: var(--secondary-color); }
+
+.nav-item{ margin-right: 2.8%; }
 
 /*=================================
   Header styling ends here

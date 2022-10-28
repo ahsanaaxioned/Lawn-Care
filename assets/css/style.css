@@ -399,7 +399,118 @@ li {
   color: var(--primary-color);
 }
 /* service section end here */
+/* company detail section start here */
+.company-detail { background-color: #F8F9FA; }
 
+.company-detail .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detain-figure {
+   flex-basis: 48.5%; 
+   position: relative; 
+  }
+
+.welcome-to {
+   flex-basis: 45.5%;
+   padding: 28px 0 42px 0; 
+  }
+
+.detain-figure::before{
+  content: "\f04b";
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  position: absolute;
+  top: 44%;
+  left: 92%;
+  display: flex;
+  align-items: center;
+  background: var(--primary-color);
+  color: var(--other);
+  font-family: "FontAwesome";
+  justify-content: center;
+}
+
+.welcome-sub-heading{
+  color: var(--primary-color);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 28px;
+  text-transform: capitalize;
+}
+
+.detain-figure img { height: 100%;}
+
+.welcome-heading{
+  padding-bottom: 18px 3% 0;
+  color: #323333;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.welcome-para{
+  padding-bottom: 7px;
+  color: #777;
+  font-size: 11px;
+  line-height: 20px;
+}
+
+.detail-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-item{
+  width: 100%;
+  margin: 5px 0;
+  display: flex;
+  box-shadow: 1px 1px 10px 0 #cdcdcd;
+}
+
+.detail-link{
+  width: 100%;
+  padding: 16px 0 14px 18px;
+  border-radius: 2px;
+  position: relative;
+  background-color: var(--other);
+  color: var(--black);
+  font-size: 12px;
+  transition: all .5s ease-in-out;
+}
+
+.detail-item a.link-active,
+.detail-link:hover{
+  background-color: var(--primary-color);
+  color: var(--other);
+}
+
+.detail-link::before{
+  content: "\f061";
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  float: right;
+  display: flex;
+  position: absolute;
+  top: 16%;
+  right: -13px;
+  align-items: center;
+  background: var(--primary-color);
+  color: var(--other);
+  font-family: "FontAwesome";
+  font-size: 10px;
+  justify-content: center;
+  transition: all .5s ease-in-out;
+}
+
+a.link-active::before,
+.detail-link:hover::before{
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+/* company detail section end here */
 
 
 

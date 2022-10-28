@@ -732,6 +732,51 @@ span.month-year {
   color: var(--primary-color);
 }
 /* blog section end here  */
+/* newsletter section start here */
+.newslatter { background-color: var(--primary-color); }
+
+.newslatter .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newslatter form { 
+  padding: 16px 0;
+  display: flex;
+  flex-basis: 32%;
+}
+
+.subscribe-title {
+  margin-right: 6%;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.input-group { width: 71%; }
+
+.input-group input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 9px;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+}
+
+.control input {
+  padding: 9px 8px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  background-color: #396c1b;
+  color: #fff;
+  transition: all .5s ease-in-out;
+}
+
+.control input:hover { color: var(--black); }
+/* newsletter section end here  */
 /*=================================
   main styling ends here
 =================================*/

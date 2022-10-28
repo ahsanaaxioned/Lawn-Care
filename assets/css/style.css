@@ -511,8 +511,37 @@ a.link-active::before,
   color: var(--primary-color);
 }
 /* company detail section end here */
+/* contact us section start here */
+.contact-us { background-color: var(--primary-color); }
 
+.contact-us .wrapper{
+  padding: 29px 0 41px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.contact { flex-basis: 48.5%; }
+.contact-num{ flex-basis: 31.2%; }
+
+.contct-heading {
+  color: var(--other);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.contact-par {
+  color: var(--other);
+  font-size: 11px;
+  line-height: 2.3;
+}
+
+.contact-num a {
+  color: var(--secondary-color);
+  font-size: 23px;
+  font-weight: 600;
+}
+/* contact us section end here */
 
 
 /*=================================

@@ -105,6 +105,8 @@ li {
   margin: 0 auto;
 }
 
+.container{ position: relative;}
+
 *,
 *::before,
 *::after{
@@ -744,29 +746,29 @@ span.month-year {
 .newslatter form { 
   padding: 16px 0;
   display: flex;
-  flex-basis: 32%;
+  flex-basis: 35%;
 }
 
 .subscribe-title {
   margin-right: 6%;
   color: #fff;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
 }
 
-.input-group { width: 71%; }
+.input-group { width: 61%; }
 
 .input-group input {
   box-sizing: border-box;
   width: 100%;
-  padding: 9px;
+  padding: 11px;
   border: none;
   border-radius: 2px;
   outline: none;
 }
 
 .control input {
-  padding: 9px 8px;
+  padding: 11px 8px;
   border: none;
   outline: none;
   border-radius: 2px;
@@ -777,6 +779,46 @@ span.month-year {
 
 .control input:hover { color: var(--black); }
 /* newsletter section end here  */
+/* scroll to the top start here */
+.scroll-up {
+  display: none;
+  position:fixed;
+  bottom: 1%;
+  right: 1%;
+}
+
+.scroll-too {
+  position: relative;
+  text-indent: -9999px;
+}
+
+.scroll-too::before {
+  content: "\f077";
+  width: 35px;
+  height: 35px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  display: flex;
+  float: left;
+  align-items: center;
+  background: var(--other);
+  box-shadow: 1px 1px 8px #6e6868;
+  color: var(--black);
+  font-size: 20px;
+  font-family: "FontAwesome";
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  text-indent: 0;
+  transition: all .5s ease-in-out;
+}
+
+.scroll-too:hover::before { 
+  border: 1px solid var(--primary-color);
+  background-color: var(--other);
+  box-shadow: none;
+  color: var(--primary-color);
+}
+/* scroll to the top start here */
 /*=================================
   main styling ends here
 =================================*/
@@ -784,13 +826,156 @@ span.month-year {
 /*=================================
   footer styling starts here
 =================================*/ 
+footer {
+  padding: 55px 0 42px 0;
+  background-color: #252525;
+}
 
+footer .wrapper {
+  padding-bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+}
 
+.footer-logo { flex-basis: 27%; }
 
+.footer-list {
+  display: flex;
+  flex-basis: 70%;
+  justify-content: space-between;
+}
 
+.footer-item { margin: 0 3% 10px 0; }
+.footer-item:nth-child(1) { flex: 0 0 27%; }
+.footer-item:nth-child(3) { flex: 0 0 29.5%; }
 
+.footer-logo a {
+  padding-bottom: 31px;
+  color: var(--other);
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
 
+.footer-span{ color: var(--primary-color); }
 
+.footer-para {
+  padding-right: 11%;
+  color: #B5B5B5;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.list-heading {
+  padding-bottom: 31px;
+  color: var(--other);
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.services-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item a,
+.info-item a,
+.sub-para{
+  color: var(--other);
+  font-size: 12px;
+}
+
+.sub-title { 
+  font-size: 12px;
+  text-transform: capitalize;
+ }
+
+.info-item:nth-child(1) a { color: #B5B5B5; }
+.sub-title { color: var(--secondary-color); }
+
+.item a{
+  padding-left: 16px;
+  position: relative;
+  transition: all .5s ease-in-out;
+}
+
+.item a:hover { color: var(--primary-color); }
+
+.item a::before{
+  content: "\f105";
+  float: left;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  font-family: "FontAwesome";
+  font-size: 10px;
+}
+
+.info-item a {
+  padding-left: 28px;
+  position: relative;
+  text-transform: capitalize;
+  transition: all .5s ease-out;
+}
+
+.info-item a:hover { color: var(--primary-color); }
+
+.usa { 
+  display: block; 
+  text-transform: uppercase;
+}
+
+.info-item a::before{
+  float: left;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  font-family: "FontAwesome";
+  font-size: 12px;
+}
+
+.info-item:nth-child(1) a::before { content: "\f3c5"; }
+.info-item:nth-child(2) a::before { content: "\f095"; }
+.info-item:nth-child(3) a::before { content: "\f0e0"; }
+
+.social .wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-icon::before {
+width: 34px;
+height: 34px;
+background-color: #303030;
+color: var(--other);
+font-size: 18px;
+} 
+
+.footer-social { padding-bottom: 52px; }
+.footer-link { margin-right: 1%; }
+
+.copy{
+  color: #B5B5B5;
+  font-size: 12px;
+  text-align: center;
+}
+
+.copy-span{
+  display: inline-block;
+  position: relative;
+  text-indent: -9999px;
+}
+
+.copy-span::before {
+  content: '\f004';
+  margin: 3px 15%;
+  float: right;
+  color: var(--other);
+  font-family: 'FontAwesome';
+  font-weight: 900;
+  text-indent: 0;
+}
  /*=================================
   footer styling ends here
 =================================*/ 

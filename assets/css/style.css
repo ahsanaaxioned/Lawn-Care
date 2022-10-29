@@ -819,6 +819,47 @@ span.month-year {
   color: var(--primary-color);
 }
 /* scroll to the top start here */
+/* gallery page started here */
+/* gallery banner start here */
+.gal-banner{
+padding: 195px 0 50px 0;
+background: url(/assets/images/bg_2.jpg) center no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+
+.gallery-heading {
+  padding-bottom: 20px;
+  color: #fff;
+  font-size: 42px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.navigate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home {
+  margin-left: 2%;
+  color: #e5e5e5;
+  font-size: 12px;
+  text-transform: capitalize;
+  transition: all .5s ease-in-out;
+}
+
+.home::after {
+  content: '\f105';
+  margin-left: 6%;
+  font-family: 'FontAwesome';
+  font-weight: 900;
+}
+
+.home:hover { color: var(--secondary-color); }
+/* gallery banner end here */
 /*=================================
   main styling ends here
 =================================*/

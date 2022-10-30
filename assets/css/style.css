@@ -637,19 +637,37 @@
    .client-detail { padding-left: 10px; }
    
    .controls { text-align: center; }
-   
-   .btn {
-     width: 8px;
-     height: 8px;
-     padding: 0;
-     border: none;
-     border-radius: 50%;
-     margin: 0;
-     background: #E5E5E5;
-     text-indent: -9999px;
-   }
-   
-   .btn.btn-control { background-color: var(--primary-color); }
+
+     .slick-dots {
+       padding-top: 40px;
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-pack: center;
+       -ms-flex-pack: center;
+       justify-content: center;
+       -webkit-box-align: center;
+       -ms-flex-align: center;
+       align-items: center;
+     }
+  
+     .slick-dots li { margin-right: 1%; }
+     .slick-dots li:last-child { margin-right: 0; }
+
+     .slick-dots button {
+       width: 8px;
+       height: 8px;
+       padding: 0;
+       border: 2px solid #cdcdcd;
+       border-radius: 50%;
+       background-color: var(--other);
+       text-indent: -9999px;
+     }
+  
+     .slick-dots li:last-child button { margin-right: 0; }
+  
+     .slick-dots li:hover button,
+     .slick-active button { background-color: var(--primary-color); }
    /* Testimonial section end here */
    /* blog section strat here  */
    .blog .wrapper {  padding: 74px 0 95px 0; }

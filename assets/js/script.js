@@ -10,6 +10,7 @@ const hamburger = document.querySelector(".hamburger"),
     subject = document.querySelector(".subject"),
     successSpan = document.querySelector(".succes-span"),
     scrollUp = document.querySelector(".scroll-up"),
+    feedbackList =document.querySelector(".feedback-lis"),
     nameRegex = /^[A-Za-z]+$/,
     msgRegex = /^[A-Za-z0-9.]{5,50}$/,
     emailRegex = /^[A-Za-z0-9._]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/,
@@ -32,6 +33,44 @@ window.addEventListener("scroll",()=>{
     }
 });
 // scroll-up end here
+
+// slider start here
+if (feedbackList) {
+    $(".feedback-lis").slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        prevArrow: false,
+        nextArrow: false,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+}
+// slider start here
 
 // modal for gallery page start her
 // modal structure start here

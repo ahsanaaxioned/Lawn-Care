@@ -1397,10 +1397,9 @@
    .navbar.active { transform: translateX(0); }
    
    .nav-list {
-     margin: 100px;
-     flex-direction: column;
-     line-height: 50px;
-   }
+       flex-direction: column;
+       line-height: 50px;
+     }
    
    .banner-heading { font-size: 23px; }
    .banner { padding: 75px 0 52px 0; }

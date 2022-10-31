@@ -20,7 +20,7 @@ const hamburger = document.querySelector(".hamburger"),
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navbar.classList.toggle("active");
-  html.classList.add("remove-scroll")
+  html.classList.toggle("remove-scroll")
 });
 // hamburger event end here
 

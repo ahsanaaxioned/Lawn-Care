@@ -25,6 +25,12 @@ hamburger.addEventListener("click", () => {
 // hamburger event end here
 
 // scroll-up start here
+scrollUp.addEventListener("click",()=>{
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+})
+});
 window.addEventListener("scroll", () => {
   if (window.scrollY > scrollUp.offsetHeight + 25) {
     scrollUp.style.display = "block";
@@ -32,6 +38,7 @@ window.addEventListener("scroll", () => {
     scrollUp.style.display = "none";
   }
 });
+
 // scroll-up end here
 
 // slider start here

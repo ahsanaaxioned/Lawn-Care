@@ -1323,6 +1323,7 @@
    .footer-item { margin: 0 6% 10px 0; }
    .client-name { font-size: 12px; }
    .position { font-size: 10px; }
+   .modal-close { right: -8%; }
    .info-list {
      display: flex;
      flex-direction: column;
@@ -1347,7 +1348,8 @@
    .header-first .wrapper { padding: 10px; }
    .learn-btn { padding: 5px 3.2%; }
    .learn-btn::before { right: 2%; }
-   
+   .modal-content { width: 70%; }
+   .modal-close { right: -9%; }
    .header-second {
      position: relative;
      overflow: hidden;
@@ -1441,7 +1443,7 @@
    }
    .form-box { background-color: #F8F9FA; }
    .modal-figure { width: 70%; }
-   .modal-close { right: 8%; }
+   .modal-close { right: -9%; }
    
    }
    /*media query for 768px end here*/
@@ -1458,4 +1460,6 @@
    .contct-heading { padding-bottom: 5px; }
    .subscribe-title { font-size: 15px; }
    .copy { font-size: 11px; }
+   .modal-content { width: 80%; }
+   .modal-close { right: -10%; }
    }

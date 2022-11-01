@@ -961,12 +961,6 @@
     .rotate1 { transform: translateY(3px) rotate(45deg);}
     .rotate2 { transform: translateY(-5px) rotate(-45deg); }
     .remove-scroll { overflow-y: hidden; }
-   
-    .modal.appear {
-     opacity: 1;
-     pointer-events: all;
-    }
-   
     .modal.appear .modal-image { animation: zoom 0.3s linear; }
    
     @keyframes zoom {

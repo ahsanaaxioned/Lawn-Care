@@ -11,8 +11,8 @@ const hamburger = document.querySelector(".hamburger"),
   successSpan = document.querySelector(".succes-span"),
   scrollUp = document.querySelector(".scroll-up"),
   feedbackList = document.querySelector(".feedback-lis"),
-  nameRegex = /^[A-Za-z]+$/,
-  msgRegex = /^[A-Za-z0-9.]{5,50}$/,
+  nameRegex = /^[A-Za-z\s]+$/,
+  msgRegex = /^[A-Za-z0-9.\s]{5,50}$/,
   emailRegex = /^[A-Za-z0-9._]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/,
   modal = document.querySelector(".modal");
 // global variable declaration end here

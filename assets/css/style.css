@@ -1098,9 +1098,9 @@
    }
    
    .error {
-     display: none;
      color: #eb1414;
      font-size: 12px;
+     visibility: hidden;
    }
    
    .form-input.fail input,
@@ -1115,7 +1115,7 @@
      box-shadow: none;
    }
    
-   .error.fail { display: block; }
+   .error.fail { visibility: visible; }
    .input-control { padding-top: 13px; }
    
    .send-msg-btn {

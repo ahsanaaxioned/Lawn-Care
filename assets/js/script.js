@@ -14,7 +14,7 @@ const hamburger = document.querySelector(".hamburger"),
   nameRegex = /^[A-Za-z\s]+$/,
   msgRegex = /^[A-Za-z0-9.\s]{5,50}$/,
   emailRegex = /^[A-Za-z0-9._]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/,
-  modal = document.querySelector(".modal");
+  modalWrapper = document.querySelector(".wrapper-large");
 // global variable declaration end here
 // hamburger event start here
 hamburger.addEventListener("click", () => {
@@ -25,11 +25,11 @@ hamburger.addEventListener("click", () => {
 // hamburger event end here
 
 // scroll-up start here
-scrollUp.addEventListener("click",()=>{
+scrollUp.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth"
-})
+  })
 });
 window.addEventListener("scroll", () => {
   if (window.scrollY > scrollUp.offsetHeight + 25) {
@@ -77,69 +77,45 @@ if (feedbackList) {
     ]
   });
 }
-// slider start here
+// slider end here
 
 // modal for gallery page start her
 // modal structure start here
-if (modal) {
-  modal.innerText = "";
-  div = document.createElement("div");
-  div.classList.add("modal-content");
-  div.innerHTML = `<div class="modal-close">
+galleryItem.forEach(function (image, index) {
+  image.addEventListener("click", function () {
+    galleryImage = document.querySelectorAll(".gallery-image");
+    const modalImg = galleryImage[index].src;
+    div = document.createElement("div");
+    div.classList.add("modal");
+    div.innerHTML = `<div class="modal-content"><div class="modal-close">
 <span class="modal-bar rotate1">bar</span>
 <span class="modal-bar hide">bar</span>
 <span class="modal-bar rotate2">bar</span>
 </div>
 <figure class="modal-figure">
-<img src="" alt="Modal Image" class="modal-image">
-</figure>`
-  modal.appendChild(div);
-  const modalClose = div.children[0];
-  // modal structure end here
-  // add and remove class function for moda start here
-  function appearClass() {
-    if (modal && html) {
-      modal.classList.add("appear");
-      html.classList.add("remove-scroll");
-    }
-  };
-  function removeClass() {
-    if (modal && html) {
-      modal.classList.remove("appear");
-      html.classList.remove("remove-scroll");
-    }
-  };
-  // add and remove class function for modal start here
-  // Modal function start here
-  galleryItem.forEach(function (image, index) {
-    image.addEventListener("click", function () {
-      const modalImg = document.querySelector(".modal-image"),
-        galleryImage = document.querySelectorAll(".gallery-image");
-      if (modalImg && galleryImage) {
-        modalImg.src = galleryImage[index].src;
-        appearClass();
-      }
+<img src="${modalImg}" alt="Modal Image" class="modal-image">
+</figure></div>`;
+    modalWrapper.appendChild(div);
+    const modal = document.querySelector(".modal");
+    const modalClose = document.querySelector(".modal-close");
+    modalClose.addEventListener("click", function () {
+      div.remove();
+
     });
+    modal.addEventListener("click", function (e) {
+      if (e.target == modal) {
+        div.remove();
+      };
+    });
+    window.addEventListener("keydown", function (e) {
+      if (e.key == "Escape") {
+        div.remove();
+      };
+    });
+  
   });
-  modalClose.addEventListener("click", function () {
-    removeClass();
-  });
-  // Modal function end here
-  //  event for outside click and escape btn start here
-
-  modal.addEventListener("click", function (e) {
-    if (e.target == modal) {
-      removeClass();
-    };
-  });
-
-  window.addEventListener("keydown", function (e) {
-    if (e.key == "Escape") {
-      removeClass();
-    };
-  });
-}
-//  event for outside click and escape btn start here
+});
+// Modal function end here
 // modal for gallery page end her
 
 // form validation for contact page start here
@@ -196,8 +172,9 @@ function validation(input, regex) {
     formInput.classList.remove("fail");
   }
 };
-// validation function start here 
+// validation function start here
 // input event start here
+if(form){
 fullName.addEventListener("blur", () => {
   validation(fullName, nameRegex)
 });
@@ -210,6 +187,7 @@ feedbackMsg.addEventListener("blur", () => {
 subject.addEventListener("blur", () => {
   validation(subject, nameRegex)
 });
+}
 // input event end here
 // form validation for contact page end here
 

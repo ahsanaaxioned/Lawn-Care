@@ -926,8 +926,8 @@
      flex-direction: column;
      justify-content: center;
      overflow: hidden;
-     opacity: 0;
-     pointer-events: none;
+     /* opacity: 0; */
+     /* pointer-events: none; */
    }
    
    .modal-content {

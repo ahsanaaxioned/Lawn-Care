@@ -96,23 +96,27 @@ galleryItem.forEach(function (image, index) {
 <img src="${modalImg}" alt="Modal Image" class="modal-image">
 </figure></div>`;
     modalWrapper.appendChild(div);
+    html.classList.add("remove-scroll");
     const modal = document.querySelector(".modal");
+    function removeModal() {
+      div.remove();
+      html.classList.remove("remove-scroll");
+    }
     const modalClose = document.querySelector(".modal-close");
     modalClose.addEventListener("click", function () {
-      div.remove();
-
+      removeModal();
     });
     modal.addEventListener("click", function (e) {
       if (e.target == modal) {
-        div.remove();
+        removeModal();
       };
     });
     window.addEventListener("keydown", function (e) {
       if (e.key == "Escape") {
-        div.remove();
+        removeModal();
       };
     });
-  
+
   });
 });
 // Modal function end here

@@ -80,7 +80,7 @@ if (feedbackList) {
 // slider end here
 
 // modal for gallery page start her
-// modal structure start here
+// modal function start here
 galleryItem.forEach(function (image, index) {
   image.addEventListener("click", function () {
     galleryImage = document.querySelectorAll(".gallery-image");
